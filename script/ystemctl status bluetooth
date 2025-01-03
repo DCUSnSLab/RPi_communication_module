@@ -1,0 +1,21 @@
+[0;1;32m●[0m dbus.service - D-Bus System Message Bus
+     Loaded: loaded (]8;;file://raspberrypi/lib/systemd/system/dbus.service/lib/systemd/system/dbus.service]8;;; static[0;1;32m[0m)
+     Active: [0;1;32mactive (running)[0m since Fri 2024-12-27 21:32:12 KST; 6 days ago
+TriggeredBy: [0;1;32m●[0m dbus.socket
+       Docs: ]8;;man:dbus-daemon(1)man:dbus-daemon(1)]8;;
+   Main PID: 542 (dbus-daemon)
+      Tasks: 1 (limit: 8731)
+        CPU: 6.673s
+     CGroup: /system.slice/dbus.service
+             └─[0;38;5;245m542 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only[0m
+
+Jan 02 15:00:23 raspberrypi dbus-daemon[542]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.11' (uid=0 pid=687 comm="/usr/sbin/NetworkManager --no-daemon")
+Jan 02 15:00:23 raspberrypi dbus-daemon[542]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+Jan 02 15:25:02 raspberrypi dbus-daemon[542]: [system] Activating via systemd: service name='org.freedesktop.UPower' unit='upower.service' requested by ':1.66' (uid=1000 pid=2424 comm="/usr/lib/chromium/chromium --force-renderer-access")
+Jan 02 15:25:03 raspberrypi dbus-daemon[542]: [system] Successfully activated service 'org.freedesktop.UPower'
+Jan 02 15:33:40 raspberrypi dbus-daemon[542]: [system] Activating via systemd: service name='org.freedesktop.PackageKit' unit='packagekit.service' requested by ':1.69' (uid=0 pid=15974 comm="/usr/bin/gdbus call --system --dest org.freedeskto")
+Jan 02 15:33:41 raspberrypi dbus-daemon[542]: [system] Successfully activated service 'org.freedesktop.PackageKit'
+Jan 02 17:26:12 raspberrypi dbus-daemon[542]: [system] Activating via systemd: service name='org.freedesktop.PackageKit' unit='packagekit.service' requested by ':1.77' (uid=0 pid=16808 comm="/usr/bin/gdbus call --system --dest org.freedeskto")
+Jan 02 17:26:12 raspberrypi dbus-daemon[542]: [system] Successfully activated service 'org.freedesktop.PackageKit'
+Jan 02 17:52:41 raspberrypi dbus-daemon[542]: [0;1;39m[0;1;31m[0;1;39m[system] Rejected send message, 0 matched rules; type="method_return", sender=":1.32" (uid=1000 pid=865 comm="/usr/bin/wireplumber") interface="(unset)" member="(unset)" error name="(unset)" requested_reply="0" destination=":1.7" (uid=0 pid=646 comm="/usr/libexec/bluetooth/bluetoothd --experimental")[0m
+Jan 02 21:28:21 raspberrypi dbus-daemon[542]: [0;1;39m[0;1;31m[0;1;39m[system] Rejected send message, 0 matched rules; type="method_return", sender=":1.32" (uid=1000 pid=865 comm="/usr/bin/wireplumber") interface="(unset)" member="(unset)" error name="(unset)" requested_reply="0" destination=":1.7" (uid=0 pid=646 comm="/usr/libexec/bluetooth/bluetoothd --experimental")[0m
