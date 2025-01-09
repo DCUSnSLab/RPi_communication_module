@@ -10,7 +10,7 @@ NOTIFY_TIMEOUT = 1000
 class SensorAdvertisement(Advertisement):
     def __init__(self, index):
         Advertisement.__init__(self, index, "peripheral")
-        self.add_local_name("SensorHub")
+        self.add_local_name("NeuraLoad")
         self.include_tx_power = True
 
 class SensorService(Service):
