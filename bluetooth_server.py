@@ -14,7 +14,7 @@ class SensorAdvertisement(Advertisement):
         self.include_tx_power = True
 
 class SensorService(Service):
-    SENSOR_SVC_UUID = "00000001-710e-4a5b-8d75-3e5b444bc3cf"
+    SENSOR_SVC_UUID = "00000001-736c-4645-b520-7127aadf8c47"
 
     def __init__(self, index):
         Service.__init__(self, index, self.SENSOR_SVC_UUID, True)
@@ -22,7 +22,7 @@ class SensorService(Service):
         self.add_characteristic(LaserCharacteristic(self))
 
 class IMUCharacteristic(Characteristic):
-    IMU_CHARACTERISTIC_UUID = "00000002-710e-4a5b-8d75-3e5b444bc3cf"
+    IMU_CHARACTERISTIC_UUID = "00000002-736c-4645-b520-7127aadf8c47"
 
     def __init__(self, service):
         self.notifying = False
@@ -63,7 +63,7 @@ class IMUCharacteristic(Characteristic):
         return dbus.Array(self.get_imu_data())
 
 class LaserCharacteristic(Characteristic):
-    LASER_CHARACTERISTIC_UUID = "00000003-710e-4a5b-8d75-3e5b444bc3cf"
+    LASER_CHARACTERISTIC_UUID = "00000003-736c-4645-b520-7127aadf8c47"
 
     def __init__(self, service):
         self.notifying = False
