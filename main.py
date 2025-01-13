@@ -3,7 +3,7 @@ import time
 import random
 
 from utils.sensor_data import SensorData
-from bluetooth_server_v4 import start_ble_server
+from bluetooth_server_v5 import start_ble_server
 
 def update_loop(sensor_data):
     while True:
@@ -28,7 +28,7 @@ def update_loop(sensor_data):
             [
                 random.uniform(-1.0, 1.0),  # AccelX
                 random.uniform(-1.0, 1.0),  # AccelY
-                random.uniform(9.5, 9.8),  # AccelZ (중력가속도 근사값)
+                random.uniform(9.5, 9.8),   # AccelZ (중력가속도 근사값)
                 random.uniform(-0.1, 0.1),  # GyroX
                 random.uniform(-0.1, 0.1),  # GyroY
                 random.uniform(-0.1, 0.1),  # GyroZ
@@ -38,6 +38,7 @@ def update_loop(sensor_data):
             ]
             for _ in range(4)  # 센서4개
         ]
+        #print(new_imu)
         sensor_data.set_imu_data(new_imu)
 
         # 랜덤 Laser 데이터 (센서4개, 거리값 0.5~5.0m)

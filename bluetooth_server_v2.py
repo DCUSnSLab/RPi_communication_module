@@ -68,6 +68,7 @@ class IMUCharacteristic(Characteristic):
         # 2차원 리스트 -> 1차원으로 평탄화
         flat_data = [item for sublist in imu_data for item in sublist]
         # float 개수만큼 packing
+        
         return struct.pack(f"{len(flat_data)}f", *flat_data)
 
     def set_imu_callback(self):
