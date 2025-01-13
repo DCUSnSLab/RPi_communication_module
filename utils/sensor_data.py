@@ -19,6 +19,8 @@ class SensorData:
         # Weight: 단일 float
         self._weight_data = 0.0
 
+        # 장치 식별자
+        self._device_id = "NEURALOAD-1234"  # 기본 값 
     # -----------------------
     # IMU
     # -----------------------
@@ -57,3 +59,12 @@ class SensorData:
 
     def get_weight_data(self):
         return self._weight_data
+
+    # -----------------------
+    # Device ID
+    # -----------------------
+    def set_device_id(self, device_id):
+        self._device_id = device_id
+
+    def get_device_id(self):
+        return self._device_id

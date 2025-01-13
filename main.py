@@ -3,7 +3,7 @@ import time
 import random
 
 from utils.sensor_data import SensorData
-from bluetooth_server_v3 import start_ble_server
+from bluetooth_server_v4 import start_ble_server
 
 def update_loop(sensor_data):
     while True:
@@ -54,7 +54,7 @@ def update_loop(sensor_data):
 def main():
     # 공용 SensorData 객체 생성
     sensor_data = SensorData()
-
+    sensor_data.set_device_id("NEURALOAD-0001")
     # update_loop를 스레드로 동작시킴 (데몬 스레드로 설정도 가능)
     updater_thread = threading.Thread(target=update_loop, args=(sensor_data,))
     updater_thread.daemon = True
